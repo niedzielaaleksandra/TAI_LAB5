@@ -8,6 +8,18 @@ import { BlogComponent } from './blog/blog.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { BlogItemComponent } from './components/blog-item/blog-item.component';
+import { BlogItemTextComponent } from './components/blog-item-text/blog-item-text.component';
+import { BlogItemImageComponent } from './components/blog-item-image/blog-item-image.component';
+import { BlogItemDetailsComponent } from './components/blog-item-details/blog-item-details.component';
+import {HttpClientModule} from '@angular/common/http';
+import {DataService} from './services/data.service';
+import { SummaryPipe } from './pipes/summary.pipe';
+import { SearchBarComponent } from './shared/search-bar/search-bar.component';
+import {FormsModule} from '@angular/forms';
+import { BlogHomeComponent } from './blog-home/blog-home.component';
+import { TextFormatDirective } from './directives/text-format.directive';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -16,13 +28,25 @@ import { NavbarComponent } from './navbar/navbar.component';
     BlogComponent,
     QuizComponent,
     ContactComponent,
-    NavbarComponent
+    NavbarComponent,
+    BlogItemComponent,
+    BlogItemTextComponent,
+    BlogItemImageComponent,
+    BlogItemDetailsComponent,
+    SummaryPipe,
+    SearchBarComponent,
+    BlogHomeComponent,
+    TextFormatDirective,
+    FilterPipe,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

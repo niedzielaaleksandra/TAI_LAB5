@@ -4,7 +4,8 @@ import {HomeComponent} from '../app/home/home.component';
 import {ContactComponent} from '../app/contact/contact.component';
 import {BlogComponent} from '../app/blog/blog.component';
 import {QuizComponent} from '../app/quiz/quiz.component';
-
+import {BlogItemDetailsComponent} from '../app/components/blog-item-details/blog-item-details.component';
+import {BlogHomeComponent} from '../app/blog-home/blog-home.component';
 
 const routes: Routes = [
   {
@@ -15,15 +16,23 @@ const routes: Routes = [
     path: 'contact',
     component: ContactComponent,
 },
-{
-         path: 'blog',
-    component: BlogComponent,
+
+  {
+    path: 'blog', 
+  component: BlogHomeComponent
 },
+
 {
   path: 'quiz',
   component: QuizComponent,
 
-}
+},
+{
+  path: 'blog/detail/:id',
+  component: BlogItemDetailsComponent
+  },
+  
+
 ];
 
 @NgModule({
