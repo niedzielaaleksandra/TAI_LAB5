@@ -21,6 +21,8 @@ import { BlogHomeComponent } from './blog-home/blog-home.component';
 import { TextFormatDirective } from './directives/text-format.directive';
 import { FilterPipe } from './pipes/filter.pipe';
 import { SelectizeComponent } from './components/selectize/selectize.component';
+import { NewPostComponent } from './components/new-post/new-post.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { SelectizeComponent } from './components/selectize/selectize.component';
     TextFormatDirective,
     FilterPipe,
     SelectizeComponent,
+    NewPostComponent,
+    LoginComponent,
 
     
   ],

@@ -16,8 +16,12 @@ export class DataService {
     getById(id) {
       return this.http.get(this.url + '/api/posts/' + id);
 }
+createPost(data) {
+  return this.http.post('${this.url}/posts', { data: JSON.stringify(data) });
+}
 
-  // getByText(data) {
-  //   return this.http.post(this.url +'/api/posts/', data);
-  // }
+
+  getByText(data) {
+    return this.http.post(this.url +'/api/posts/', data);
+  }
 }
